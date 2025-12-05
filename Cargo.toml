@@ -1,0 +1,36 @@
+[package]
+name = "quantumharmony-benchmark"
+version = "1.0.0"
+edition = "2021"
+description = "SPHINCS+ Post-Quantum Signature TPS Benchmark for QuantumHarmony"
+license = "MIT"
+repository = "https://github.com/Paraxiom/quantumharmony-benchmark"
+keywords = ["quantum", "cryptography", "sphincs", "benchmark", "blockchain"]
+categories = ["cryptography", "command-line-utilities"]
+
+[dependencies]
+# SPHINCS+ Post-Quantum Cryptography
+pqcrypto-sphincsplus = "0.7"
+pqcrypto-traits = "0.3"
+
+# Hashing and utilities
+sha3 = "0.10"
+rand = "0.8"
+hex = "0.4"
+
+# CLI and output
+clap = { version = "4.4", features = ["derive"] }
+colored = "2.1"
+
+# Parallelization
+rayon = "1.8"
+num_cpus = "1.16"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "sphincs-benchmark"
+path = "src/main.rs"
