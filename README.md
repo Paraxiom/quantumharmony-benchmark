@@ -178,14 +178,6 @@ The testnet may be offline for maintenance. To get notified when it's back:
 - **Signature size**: 17,088 bytes
 - **Verification time**: ~250ms per signature
 
-## Roadmap
-
-| Phase | Status | Description |
-|-------|--------|-------------|
-| **Testnet (Now)** | Live | 3-validator network with Aura consensus |
-| **Q1 2025** | Planned | HotStuff/Bullshark BFT consensus upgrade |
-| **Q2 2025** | Planned | Kirq PoC (Proof of Capacity) integration |
-
 **Current Architecture:**
 - Consensus: Aura (round-robin block production)
 - Block time: 6 seconds
