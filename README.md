@@ -153,7 +153,7 @@ curl -s http://51.79.26.123:9944 -H "Content-Type: application/json" \
 
 The testnet may be offline for maintenance. To get notified when it's back:
 
-1. **Subscribe to Paraxiom YouTube**: https://www.youtube.com/@Paraxiom
+1. **Subscribe to Paraxiom YouTube**: https://www.youtube.com/channel/UC_MzgqZZnSa8mu9Cu32JvjA
 2. **Open an issue**: https://github.com/Paraxiom/quantumharmony/issues
 3. **Ask for help**: Create an issue titled "Testnet Access Request"
 
@@ -199,7 +199,7 @@ The testnet may be offline for maintenance. To get notified when it's back:
 ## Need Help?
 
 - **GitHub Issues**: https://github.com/Paraxiom/quantumharmony/issues
-- **YouTube**: https://www.youtube.com/@Paraxiom
+- **YouTube**: https://www.youtube.com/channel/UC_MzgqZZnSa8mu9Cu32JvjA
 - **Full Project**: https://github.com/Paraxiom/quantumharmony
 
 ## License
