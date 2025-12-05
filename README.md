@@ -57,7 +57,61 @@ cargo run --release -- --full
 
 # Custom
 cargo run --release -- --transactions 200 --segments 64
+
+# REAL NETWORK BENCHMARK (monitor block production)
+cargo run --release -- --network
+
+# REAL TPS TEST (submit actual transactions via faucet)
+cargo run --release -- --real-tps --transactions 10
 ```
+
+## Real TPS Testing
+
+Test actual transaction throughput using the testnet faucet:
+
+```bash
+# Test with 10 transactions
+cargo run --release -- --real-tps --transactions 10
+
+# Custom faucet URL
+cargo run --release -- --real-tps --faucet "http://your-faucet:8080"
+```
+
+This mode:
+1. Checks faucet availability
+2. Verifies validator connectivity
+3. Submits real transactions via the faucet
+4. Measures actual TPS including block confirmation
+
+## Real Network Benchmark
+
+Test the **actual network** - not just local CPU:
+
+```bash
+# Test against live testnet validators
+cargo run --release -- --network
+
+# Custom validator endpoints
+cargo run --release -- --network --validators "http://your-node:9944"
+```
+
+**Output:**
+```
+╔══════════════════════════════════════════════════════════════════╗
+║     LIVE NETWORK TPS BENCHMARK                                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Checking validator connectivity...
+  http://51.79.26.123:9944 ... ONLINE (2 peers)
+  http://51.79.26.168:9944 ... ONLINE (2 peers)
+  http://209.38.225.4:9944 ... ONLINE (2 peers)
+
+Network Status: 3 validators online
+Blocks produced: 3
+Estimated Network TPS: 10 TPS
+```
+
+**Note:** This measures block production rate. Transaction testing requires tokens from a faucet (coming soon).
 
 ## Network TPS Scaling
 
